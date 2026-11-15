@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 20% 98%;
+    --foreground: 160 30% 10%;
+    --card: 0 0% 100%;
+    --muted: 150 12% 94%;
+    --muted-foreground: 160 8% 38%;
+    --border: 150 12% 88%;
+    --ring: 158 64% 26%;
+    --primary: 158 64% 22%; /* deep green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 20% 92%;
+    --secondary-foreground: 158 50% 18%;
+    --accent: 38 92% 50%; /* warm amber */
+    --accent-foreground: 30 80% 10%;
+    --success: 152 65% 28%;
+    --warning: 32 95% 38%;
+    --danger: 0 72% 46%;
+    --info: 214 80% 42%;
+  }
+
+  .dark {
+    --background: 160 25% 7%;
+    --foreground: 60 10% 94%;
+    --card: 160 22% 10%;
+    --muted: 160 15% 15%;
+    --muted-foreground: 150 8% 65%;
+    --border: 160 14% 20%;
+    --ring: 152 55% 45%;
+    --primary: 152 55% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 15% 17%;
+    --secondary-foreground: 150 20% 90%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 30 80% 10%;
+    --success: 152 60% 52%;
+    --warning: 38 95% 58%;
+    --danger: 0 85% 66%;
+    --info: 214 90% 68%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
