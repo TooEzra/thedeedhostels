@@ -16,9 +16,12 @@ export class ApiError extends Error {
 }
 
 async function request(path: string): Promise<Response> {
+  // Read cookies outside the try: during prerender Next throws here to mark the page dynamic,
+  // and that signal must not be swallowed.
+  const cookie = cookies().toString();
   try {
     return await fetch(`${BACKEND_URL}/api${path}`, {
-      headers: { cookie: cookies().toString() },
+      headers: { cookie },
       cache: "no-store",
     });
   } catch {
