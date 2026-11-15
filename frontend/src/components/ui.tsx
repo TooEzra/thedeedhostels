@@ -189,8 +189,8 @@ export function StatCard({
     <Card className="p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-sm text-muted-foreground">{label}</p>
-          <p className="mt-1.5 truncate text-2xl font-bold tracking-tight tabular-nums">{value}</p>
+          <p className="text-sm font-medium text-muted-foreground">{label}</p>
+          <p className="mt-1 break-words text-[1.75rem] font-bold leading-tight tracking-tight tabular-nums sm:text-2xl">{value}</p>
         </div>
         <div className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-xl", tones[tone])}>{icon}</div>
       </div>

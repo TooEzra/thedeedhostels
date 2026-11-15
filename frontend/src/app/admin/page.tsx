@@ -36,7 +36,7 @@ export default async function AdminOverview({ searchParams }: { searchParams: { 
         }
       />
 
-      <section aria-label="Key figures" className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
+      <section aria-label="Key figures" className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
         <StatCard label="Expected rent" value={formatKES(t.expected)} icon={<Wallet className="h-5 w-5" />} hint={`${t.tenants} tenants in residence`} />
         <StatCard
           label="Collected"

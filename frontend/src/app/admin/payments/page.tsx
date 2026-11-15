@@ -46,7 +46,7 @@ export default async function PaymentsPage({
         }
       />
 
-      <div className="mb-6 grid grid-cols-3 gap-3">
+      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <StatCard label="Expected" value={formatKES(t.expected)} icon={<Wallet className="h-5 w-5" />} />
         <StatCard label="Collected" value={formatKES(t.collected)} tone="success" icon={<Receipt className="h-5 w-5" />} />
         <StatCard label="Outstanding" value={formatKES(t.outstanding)} tone={t.outstanding ? "danger" : "success"} icon={<Wallet className="h-5 w-5" />} />
